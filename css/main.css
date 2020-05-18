@@ -1,0 +1,163 @@
+/* ALGEMENE CSS */
+/*.animation-basis > div {
+   position:absolute;
+   width:10%; height:10%;
+   padding:2%;
+   font-size:.66em;
+   line-height:1em;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   text-align:center;
+   background-color:dodgerblue;
+   border-radius:30%;
+}*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: lightblue;
+}
+
+/*************************/
+/* ID =  blauw_links */
+/*************************/
+
+#blauw_links {
+    transition: transform 5s ease-in;
+    animation-duration: 5s;
+    animation-name: naarRechts;
+}
+
+@keyframes naarRechts {
+    from {
+        transform: translateX(-45em);
+    }
+
+    to {
+        transform: translateX(0em);
+    }
+}
+
+/*************************/
+/* ID =blauw_rechts */
+/*************************/
+#blauw_rechts {
+    transition: transform 5s ease-in;
+    animation-duration: 5s;
+    animation-name: naarLinks;
+}
+
+@keyframes naarLinks {
+    from {
+        transform: translateX(45em);
+    }
+
+    to {
+        transform: translateX(0em);
+    }
+}
+
+/*************************/
+/* ID =groen */
+/*************************/
+#groen {
+    transition: transform 5s ease-in;
+    animation-duration: 5s;
+    animation-name: naarAchteren;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+
+    
+}
+@keyframes naarAchteren {
+    from {
+        transform-origin: center;
+        opacity: 0%;
+        transform:scale(4);
+    }
+
+    to {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+/*************************/
+/* ID =shine */
+/*************************/
+
+/*#shine{
+    transition: transform 2s ease-in;
+    animation-duration: 2s;
+    animation-name: glimmen;
+    animation-delay: 10s;
+    background-image: linear-gradient(
+    45deg,
+        #315B36,
+        #86b17F,
+     #315B36,
+        #86b17F,
+    );
+}
+
+@keyframes glimmen{
+    from{
+       { background-position:left bottom; } 
+    }
+    
+    to{
+        background-position:right top;
+    }
+} */
+
+
+
+
+/*************************/
+/*tekst*/
+/*************************/
+
+h1{
+    font-family: sans-serif;
+    color: white;
+    margin-top:2em;
+}
+
+
+h2{
+    font-family: sans-serif;
+    color: white;
+    margin-bottom: -2em;
+}
+
+button{
+border-radius: 50%;
+background-color: black;
+border: none;
+padding: 15px;
+font-size: 16px;
+margin-left: 20px;
+position: absolute;
+right: 700px;
+top: 133px;
+}
+
+#kleuren{
+    
+}
+@keyframes kleur1{
+    fill:#DB395B;
+}
+@keyframes kleur2{
+    fill:#EEB496;
+}
+@keyframes kleur3{
+    fill:#F7E5D2;
+}
+
