@@ -1,17 +1,5 @@
 /* ALGEMENE CSS */
-/*.animation-basis > div {
-   position:absolute;
-   width:10%; height:10%;
-   padding:2%;
-   font-size:.66em;
-   line-height:1em;
-   display:flex;
-   align-items:center;
-   justify-content:center;
-   text-align:center;
-   background-color:dodgerblue;
-   border-radius:30%;
-}*/
+
 * {
     margin: 0;
     padding: 0;
@@ -24,10 +12,10 @@ body {
 }
 
 /*************************/
-/* ID =  blauw_links */
+/* Class =  blauw_links */
 /*************************/
 
-#blauw_links {
+.blauw_links {
     transition: transform 5s ease-in;
     animation-duration: 5s;
     animation-name: naarRechts;
@@ -44,9 +32,9 @@ body {
 }
 
 /*************************/
-/* ID =blauw_rechts */
+/* Class = blauw_rechts */
 /*************************/
-#blauw_rechts {
+.blauw_rechts {
     transition: transform 5s ease-in;
     animation-duration: 5s;
     animation-name: naarLinks;
@@ -65,21 +53,20 @@ body {
 /*************************/
 /* ID =groen */
 /*************************/
-#groen {
+.groen {
     transition: transform 5s ease-in;
     animation-duration: 5s;
     animation-name: naarAchteren;
     animation-delay: 5s;
     animation-fill-mode: forwards;
     opacity: 0%;
-
-    
 }
+
 @keyframes naarAchteren {
     from {
         transform-origin: center;
         opacity: 0%;
-        transform:scale(4);
+        transform: scale(4);
     }
 
     to {
@@ -89,75 +76,241 @@ body {
 }
 
 /*************************/
-/* ID =shine */
-/*************************/
-
-/*#shine{
-    transition: transform 2s ease-in;
-    animation-duration: 2s;
-    animation-name: glimmen;
-    animation-delay: 10s;
-    background-image: linear-gradient(
-    45deg,
-        #315B36,
-        #86b17F,
-     #315B36,
-        #86b17F,
-    );
-}
-
-@keyframes glimmen{
-    from{
-       { background-position:left bottom; } 
-    }
-    
-    to{
-        background-position:right top;
-    }
-} */
-
-
-
-
-/*************************/
 /*tekst*/
 /*************************/
 
-h1{
-    font-family: sans-serif;
+p:nth-of-type(1) {
+    font-family: "Arial Black";
     color: white;
-    margin-top:2em;
+    margin-top: 2em;
+    font-size: 2em;
 }
 
 
-h2{
-    font-family: sans-serif;
+p:nth-of-type(2) {
+    font-family:"Arial Black";
     color: white;
-    margin-bottom: -2em;
+    font-size: 1.5em;
+    margin-bottom: -3em;
 }
 
-button{
-border-radius: 50%;
-background-color: black;
-border: none;
-padding: 15px;
-font-size: 16px;
-margin-left: 20px;
-position: absolute;
-right: 700px;
-top: 133px;
+/*************************/
+/*knoppen die voor kleurverandering zorgen*/
+/*************************/
+.knop {
+    border-radius: 100%;
+    background-color:floralwhite;
+    border: none;
+    padding: 30px;
+    font-size: 16px;
+    margin-left: 20px;
+    position: absolute;
+    right: 700px;
+    top: 133px;
 }
 
-#kleuren{
+.rood-pop {
+    fill: #FF0000;
+}
+
+.blauw_links {
+    fill: #27A1DF;
+}
+
+.blauw_rechts {
+    fill: #27A1DF;
+}
+
+.groen {
+    fill: #57A563;
+}
+
+.kleur1 {
+    fill: #ECA400;
+}
+
+.kleur2 {
+    fill: #EAF8BF;
+}
+
+.kleur3 {
+    fill: #DDBDD5;
+}
+
+/*************************/
+/*pop zweeft naar voren*/
+/*************************/
+.knop2 {
+    border-radius: 100%;
+    background-color: darkcyan;
+    border: none;
+    padding: 30px;
+    font-size: 16px;
+    margin-left: -140px;
+    position: absolute;
+    right: 700px;
+    top: 133px;
+}
+
+.groen2 {
+    transition: transform 5s ease-in;
+    animation-duration: 5s;
+    animation-name: omlaag;
+    animation-fill-mode: forwards;
+    opacity: 100%;
+
+}
+
+@keyframes omlaag {
+    from {
+        transform: translateY(0em);
+        opacity: 100%;
+    }
+
+    to {
+        transform: translateY(30em);
+        opacity: 0%;
+    }
+}
+
+.br {
+    transition: transform 4s ease-in;
+    animation-duration: 4s;
+    animation-name: verdwijnRechts;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+.bl {
+    transition: transform 4s ease-in;
+    animation-duration: 4s;
+    animation-name: verdwijnlinks;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes verdwijnlinks {
+    from {
+        transform-origin: center center;
+        transform: translateX(-45em);
+        transform:rotateX(0);
+        opacity: 100%;
+    }
+
+    to {
+        transform: translateX(-15em); 
+        opacity: 0%;
+
+    }
+}
+@keyframes verdwijnRechts {
+    from {
+        transform-origin: center center;
+        transform: translateX(45em);
+        transform:rotateX(0);
+        opacity: 100%;
+    }
+    to {
+        transform: translateX( 15em); 
+        opacity: 0%;
+
+    }
+}
+.roodpoppetje {
+    transition: transform 5s linear;
+    animation-duration: 5s;
+    animation-name: wormgat;
+    animation-delay: 9s;
+    animation-fill-mode: both;
+}
+
+@keyframes wormgat {
+
+    from {
+        transform-origin: center;
+        transform:scale(1);
+    }
+
+    to {
+        
+transform:scale(0);
+    }
+}
+
+/*************************/
+/*hover tekst*/
+/*************************/
+
+
+/*************************/
+/*pop zweeft naar voren*/
+/*************************/
+
+
+
+
+
+/*************************/
+/*media query*/
+/*************************/
+
+/*======IPHONE FORMAAT========*/
+@media (max-width: 29em) {
+
+
+    svg {
+        width: 60em;
+        margin-left: -16.2em;
+        margin-top: 5em;
+    }
+
+    .knop {
+        left: 10em;
+    }
+    .knop2 {
+        margin-top: 1.35em;
+        margin-right: -12em;
+
+    }
+}
+
+/*=======IPAD FORMAAT=========*/
+@media (min-width: 29em) and (max-width: 63.9em) {
     
-}
-@keyframes kleur1{
-    fill:#DB395B;
-}
-@keyframes kleur2{
-    fill:#EEB496;
-}
-@keyframes kleur3{
-    fill:#F7E5D2;
+
+    svg {
+        width: 90em;
+        margin-left: -22em;
+        margin-top: 3em;
+    }
+
+    .knop {
+        margin-top: 1.4em;
+        left: 19em;
+    }
+    .knop2 {
+        margin-top: 1.35em;
+        margin-right: -14em;
+
+    }
 }
 
+/*===========LAPTOP FORMAAT===========*/
+@media (min-width: 64em) and (max-width: 162em) {
+
+    svg {
+        width: 85em;
+
+        margin-top: 3em;
+    }
+
+    .knop {
+        margin-top: 1.4em;
+
+    }
+
+    .knop2 {
+        margin-top: 1.35em;
+        margin-right: 12em;
+
+    }
+}
