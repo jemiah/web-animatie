@@ -298,13 +298,13 @@ p:nth-of-type(2):hover {
     }
 
     svg {
-        width: 50em;
-        margin-left: -13em;
+        width: 60em;
+        margin-left: -16em;
         margin-top: 6em;
     }
 
     .knop {
-        left: 8.5em;
+        left: 10.5em;
     }
 
     .knop2 {
