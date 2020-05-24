@@ -29,7 +29,7 @@ body {
 }
 
 /*************************/
-/* Start animatie */
+/* Start animatie 1.1 */
 /*************************/
 
 .blauw_links {
@@ -49,7 +49,7 @@ body {
 }
 
 /*************************/
-/* Start animatie */
+/* Start animatie 1.2 */
 /*************************/
 .blauw_rechts {
     transition: transform 5s ease-in;
@@ -68,7 +68,7 @@ body {
 }
 
 /*************************/
-/* Start animatie */
+/* Start animatie 1.3 */
 /*************************/
 .groen {
     transition: transform 5s ease-in;
@@ -160,7 +160,8 @@ p:nth-of-type(2) {
     transition: transform 5s ease-in;
     animation-duration: 5s;
     animation-name: omlaag;
-    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
     animation-iteration-count: 1;
     opacity: 100%;
 
@@ -182,8 +183,8 @@ p:nth-of-type(2) {
     transition: transform 4s ease-in;
     animation-duration: 4s;
     animation-name: verdwijnRechts;
-    animation-delay: 6s;
-    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
     animation-iteration-count: 1;
 }
 
@@ -191,8 +192,8 @@ p:nth-of-type(2) {
     transition: transform 4s ease-in;
     animation-duration: 4s;
     animation-name: verdwijnlinks;
-    animation-delay: 6s;
-    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
     animation-iteration-count: 1;
 }
 
@@ -230,7 +231,7 @@ p:nth-of-type(2) {
     transition: transform 5s linear;
     animation-duration: 5s;
     animation-name: wormgat;
-    animation-delay: 6s;
+    animation-delay: 1s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
 }
@@ -264,14 +265,13 @@ p:nth-of-type(2):hover {
 /*Hover buttons*/
 /*************************/
 
-.knop {
+.knop:hover {
     background-color: #c3e3e3;
 }
 
 .knop2:hover {
     background-color: #738f6f;
 }
-
 
 /*************************/
 /*media query*/
