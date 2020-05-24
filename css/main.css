@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-boxx;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,9 +11,23 @@ body {
     background-color: lightblue;
     overflow-y: hidden;
 }
+.rood-pop {
+    fill: #FF0000;
+}
 
+.blauw_links {
+    fill: #27A1DF;
+}
+
+.blauw_rechts {
+    fill: #27A1DF;
+}
+
+.groen {
+    fill: #57A563;
+}
 /*************************/
-/* Class =  blauw_links */
+/* Start animatie */
 /*************************/
 
 .blauw_links {
@@ -33,7 +47,7 @@ body {
 }
 
 /*************************/
-/* Class = blauw_rechts */
+/* Start animatie */
 /*************************/
 .blauw_rechts {
     transition: transform 5s ease-in;
@@ -52,7 +66,7 @@ body {
 }
 
 /*************************/
-/* ID =groen */
+/* Start animatie */
 /*************************/
 .groen {
     transition: transform 5s ease-in;
@@ -96,11 +110,11 @@ p:nth-of-type(2) {
 }
 
 /*************************/
-/*knoppen die voor kleurverandering zorgen*/
+/* knoppen die voor kleurverandering zorgen*/
 /*************************/
 .knop {
     border-radius: 100%;
-    background-color:floralwhite;
+    background-color:azure;
     border: none;
     padding: 30px;
     font-size: 16px;
@@ -110,40 +124,27 @@ p:nth-of-type(2) {
     top: 133px;
 }
 
-.rood-pop {
-    fill: #FF0000;
-}
-
-.blauw_links {
-    fill: #27A1DF;
-}
-
-.blauw_rechts {
-    fill: #27A1DF;
-}
-
-.groen {
-    fill: #57A563;
-}
-
 .kleur1 {
     fill: #ECA400;
+    transition: transform 2s ease-in;
 }
 
 .kleur2 {
     fill: #EAF8BF;
+    transition: transform 2s ease-in;
 }
 
 .kleur3 {
     fill: #DDBDD5;
+    transition: transform 2s ease-in;
 }
 
 /*************************/
-/*pop zweeft naar voren*/
+/*Animatie pop verdwijnt*/
 /*************************/
 .knop2 {
     border-radius: 100%;
-    background-color: darkcyan;
+    background-color:darkseagreen;
     border: none;
     padding: 30px;
     font-size: 16px;
@@ -238,21 +239,27 @@ transform:scale(0);
 }
 
 /*************************/
-/*hover tekst*/
+/*Hover tekst*/
 /*************************/
 
 p:nth-of-type(1):hover{
-fill:  
+color:#D1FFC6;
 }
 p:nth-of-type(2):hover{
- fill:    
+ color:#E8F8C1;  
 }
+
 /*************************/
-/*pop zweeft naar voren*/
+/*Hover buttons*/
 /*************************/
 
+.knop:hover{
+background-color:#c3e3e3;   
+}
 
-
+.knop2:hover{
+background-color:#738f6f;  
+}
 
 
 /*************************/
@@ -263,6 +270,8 @@ p:nth-of-type(2):hover{
 @media (max-width: 29em) {
     body{
         overflow-y: hidden;
+        overflow-x: hidden;
+
     }
 
 p:nth-of-type(1) {
@@ -296,6 +305,12 @@ p:nth-of-type(2) {
 
 /*=======IPAD FORMAAT=========*/
 @media (min-width: 29em) and (max-width: 63.9em) {
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+
+    }
+    
     p:nth-of-type(1) {
     font-size: 3em;
 }
@@ -307,13 +322,13 @@ p:nth-of-type(2) {
   
     svg {
         width: 100em;
-        margin-left: -24em;
+        margin-left: -25em;
         margin-top: 4em;
     }
 
     .knop {
         margin-top: 5.5em;
-        left: 22em;
+        left: 21em;
     }
     .knop2 {
         margin-top: 5.5em;
