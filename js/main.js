@@ -30,13 +30,13 @@ function toggle() {
 
 /*knop die pop laat verdwijnen*/
 
-/*luisteren naar een event voor spatiebalk en knop*/
+/*luisteren naar een event als je op P klikt*/
 window.addEventListener('keydown',verdwijn);
-button2.addEventListener('click',verdwijn2);
+
 
 /*css aanpassen, class toevoegen*/
 function verdwijn(event){
-    if (event.keyCode === 32){
+    if (event.keyCode === 80){
         groen.classList.toggle('groen2');
         blauwLinks.classList.toggle('bl');
         blauwRechts.classList.toggle('br');
@@ -44,10 +44,12 @@ function verdwijn(event){
     }
 }
 
+/*luisteren naar een event als je op de knop klikt*/
+button2.addEventListener('click',verdwijn2);
+
 function verdwijn2(){
 groen.classList.toggle('groen2');
 blauwLinks.classList.toggle('bl');
 blauwRechts.classList.toggle('br');
 pop.classList.toggle('roodpoppetje');  
 }
- 
