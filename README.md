@@ -14,7 +14,7 @@ Om het kunstwerk interactief te maken heb ik functies bedacht:
 
 2. Als je op de witte knop klikt veranderen de kleuren van het kunstwerk. 
 
-3. Als je op de letter P klikt verdwijnt het kunstwerk. Eerst schuift de groene laag naar beneden. Vervolgens schuiven de 2 blauwe lagen uit elkaar en als laatst verdwijnt de rode pop. Het idee was eerst dat de rode pop draait op zijn plek en kleiner wordt totdat het verdwijnt maar de rode pop draaide rond het hele svg en niet op zijn plek.
+3. Als je op de letter C (computers) klikt verdwijnt het kunstwerk. Eerst schuift de groene laag naar beneden. Vervolgens schuiven de 2 blauwe lagen uit elkaar en als laatst verdwijnt de rode pop. Het idee was eerst dat de rode pop draait op zijn plek en kleiner wordt totdat het verdwijnt maar de rode pop draaide rond het hele svg en niet op zijn plek.
 Op de mobiel krijg je de optie om op een groene knop te klikken zodat die functie ook gebruikt kan worden op de mobiel.
 
 Overige ideeën die ik niet heb uitgewerkt omdat ik niet genoeg tijd had:
@@ -51,7 +51,7 @@ Wat voor mij nieuw was in Javascript is het gebruiken van een `KeyCode`. Hierdoo
 Om mijn website responsive te maken heb ik heb gewerkt met 3 breakpoints. Om het responsive te maken hebben ik gebruik gemaakt van `@media query’s`. In principe zijn alle functies die ik heb uitgewerkt te zien op alle breakpoints behalve de hovers.
 
 ### Computer:
-Op de computer zie je de witte knop en heb je de optie om op de letter P te klikken via je toetsenbord om een animatie te starten.
+Op de computer zie je de witte knop en heb je de optie om op de letter C te klikken via je toetsenbord om een animatie te starten.
 
 
 ### Ipad:
