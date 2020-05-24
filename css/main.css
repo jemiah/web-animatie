@@ -3,12 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-boxx;
 }
 
 body {
     text-align: center;
     background-color: lightblue;
+    overflow-y: hidden;
 }
 
 /*************************/
@@ -219,7 +220,7 @@ p:nth-of-type(2) {
     transition: transform 5s linear;
     animation-duration: 5s;
     animation-name: wormgat;
-    animation-delay: 9s;
+    animation-delay: 6s;
     animation-fill-mode: both;
 }
 
@@ -240,7 +241,12 @@ transform:scale(0);
 /*hover tekst*/
 /*************************/
 
-
+p:nth-of-type(1):hover{
+fill:  
+}
+p:nth-of-type(2):hover{
+ fill:    
+}
 /*************************/
 /*pop zweeft naar voren*/
 /*************************/
@@ -255,41 +261,63 @@ transform:scale(0);
 
 /*======IPHONE FORMAAT========*/
 @media (max-width: 29em) {
+    body{
+        overflow-y: hidden;
+    }
+
+p:nth-of-type(1) {
+   margin-right: -8em;
+    font-size: 3em;
+}
 
 
+p:nth-of-type(2) {
+   text-align: center;
+    margin-right: -13em;
+    font-size: 2em;
+}
+  
     svg {
-        width: 60em;
-        margin-left: -16.2em;
-        margin-top: 5em;
+        width: 100em;
+        margin-left: -24.5em;
+        margin-top: 6em;
     }
 
     .knop {
-        left: 10em;
+    left: 22em;
+    top: 15em;
     }
     .knop2 {
-        margin-top: 1.35em;
-        margin-right: -12em;
-
+    left: 15em;
+    top: 15em;
+    visibility: visible;
     }
 }
 
 /*=======IPAD FORMAAT=========*/
 @media (min-width: 29em) and (max-width: 63.9em) {
-    
+    p:nth-of-type(1) {
+    font-size: 3em;
+}
 
+
+p:nth-of-type(2) {
+    font-size: 2em;
+}
+  
     svg {
-        width: 90em;
-        margin-left: -22em;
-        margin-top: 3em;
+        width: 100em;
+        margin-left: -24em;
+        margin-top: 4em;
     }
 
     .knop {
-        margin-top: 1.4em;
-        left: 19em;
+        margin-top: 5.5em;
+        left: 22em;
     }
     .knop2 {
-        margin-top: 1.35em;
-        margin-right: -14em;
+        margin-top: 5.5em;
+        margin-right: -6em;
 
     }
 }
@@ -311,6 +339,6 @@ transform:scale(0);
     .knop2 {
         margin-top: 1.35em;
         margin-right: 12em;
-
+        visibility:hidden;
     }
 }
