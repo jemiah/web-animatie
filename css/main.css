@@ -11,6 +11,7 @@ body {
     background-color: lightblue;
     overflow-y: hidden;
 }
+
 .rood-pop {
     fill: #FF0000;
 }
@@ -26,6 +27,7 @@ body {
 .groen {
     fill: #57A563;
 }
+
 /*************************/
 /* Start animatie */
 /*************************/
@@ -103,7 +105,7 @@ p:nth-of-type(1) {
 
 
 p:nth-of-type(2) {
-    font-family:"Arial Black";
+    font-family: "Arial Black";
     color: white;
     font-size: 1.5em;
     margin-bottom: -3em;
@@ -114,7 +116,7 @@ p:nth-of-type(2) {
 /*************************/
 .knop {
     border-radius: 100%;
-    background-color:azure;
+    background-color: azure;
     border: none;
     padding: 30px;
     font-size: 16px;
@@ -144,7 +146,7 @@ p:nth-of-type(2) {
 /*************************/
 .knop2 {
     border-radius: 100%;
-    background-color:darkseagreen;
+    background-color: darkseagreen;
     border: none;
     padding: 30px;
     font-size: 16px;
@@ -159,6 +161,7 @@ p:nth-of-type(2) {
     animation-duration: 5s;
     animation-name: omlaag;
     animation-fill-mode: forwards;
+    animation-iteration-count: 1;
     opacity: 100%;
 
 }
@@ -181,6 +184,7 @@ p:nth-of-type(2) {
     animation-name: verdwijnRechts;
     animation-delay: 6s;
     animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 .bl {
@@ -189,52 +193,58 @@ p:nth-of-type(2) {
     animation-name: verdwijnlinks;
     animation-delay: 6s;
     animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
+
 @keyframes verdwijnlinks {
     from {
         transform-origin: center center;
         transform: translateX(-45em);
-        transform:rotateX(0);
+        transform: rotateX(0);
         opacity: 100%;
     }
 
     to {
-        transform: translateX(-15em); 
+        transform: translateX(-15em);
         opacity: 0%;
 
     }
 }
+
 @keyframes verdwijnRechts {
     from {
         transform-origin: center center;
         transform: translateX(45em);
-        transform:rotateX(0);
+        transform: rotateX(0);
         opacity: 100%;
     }
+
     to {
-        transform: translateX( 15em); 
+        transform: translateX(15em);
         opacity: 0%;
 
     }
 }
+
 .roodpoppetje {
     transition: transform 5s linear;
     animation-duration: 5s;
     animation-name: wormgat;
     animation-delay: 6s;
     animation-fill-mode: both;
+    animation-iteration-count: 1;
 }
 
 @keyframes wormgat {
 
     from {
         transform-origin: center;
-        transform:scale(1);
+        transform: scale(1);
     }
 
     to {
-        
-transform:scale(0);
+
+        transform: scale(0);
     }
 }
 
@@ -242,23 +252,24 @@ transform:scale(0);
 /*Hover tekst*/
 /*************************/
 
-p:nth-of-type(1):hover{
-color:#D1FFC6;
+p:nth-of-type(1):hover {
+    color: #D1FFC6;
 }
-p:nth-of-type(2):hover{
- color:#E8F8C1;  
+
+p:nth-of-type(2):hover {
+    color: #E8F8C1;
 }
 
 /*************************/
 /*Hover buttons*/
 /*************************/
 
-.knop:hover{
-background-color:#c3e3e3;   
+.knop {
+    background-color: #c3e3e3;
 }
 
-.knop2:hover{
-background-color:#738f6f;  
+.knop2:hover {
+    background-color: #738f6f;
 }
 
 
@@ -268,71 +279,73 @@ background-color:#738f6f;
 
 /*======IPHONE FORMAAT========*/
 @media (max-width: 29em) {
-    body{
+    body {
         overflow-y: hidden;
         overflow-x: hidden;
 
     }
 
-p:nth-of-type(1) {
-   margin-right: -8em;
-    font-size: 3em;
-}
+    p:nth-of-type(1) {
+       
+        font-size: 2em;
+    }
 
 
-p:nth-of-type(2) {
-   text-align: center;
-    margin-right: -13em;
-    font-size: 2em;
-}
-  
+    p:nth-of-type(2) {
+        text-align: center;
+     
+        font-size: 2em;
+    }
+
     svg {
-        width: 100em;
-        margin-left: -24.5em;
-        margin-top: 6em;
+        width: 50em;
+        margin-left: -11em;
+        margin-top: 8em;
     }
 
     .knop {
-    left: 22em;
-    top: 15em;
+        left: 10.5em;
+        top: 10em;
     }
+
     .knop2 {
-    left: 15em;
-    top: 15em;
-    visibility: visible;
+        left: 13em;
+        top: 10em;
+        visibility: visible;
     }
 }
 
 /*=======IPAD FORMAAT=========*/
 @media (min-width: 29em) and (max-width: 63.9em) {
-    body{
+    body {
         overflow-y: hidden;
         overflow-x: hidden;
 
     }
-    
+
     p:nth-of-type(1) {
-    font-size: 3em;
-}
+        font-size: 3em;
+    }
 
 
-p:nth-of-type(2) {
-    font-size: 2em;
-}
-  
+    p:nth-of-type(2) {
+        font-size: 2em;
+    }
+
     svg {
-        width: 100em;
-        margin-left: -25em;
-        margin-top: 4em;
+        width: 110em;
+        margin-left: -29.5em;
+        margin-top: 3em;
     }
 
     .knop {
         margin-top: 5.5em;
         left: 21em;
     }
+
     .knop2 {
         margin-top: 5.5em;
-        margin-right: -6em;
+        margin-right: -4em;
 
     }
 }
@@ -354,6 +367,6 @@ p:nth-of-type(2) {
     .knop2 {
         margin-top: 1.35em;
         margin-right: 12em;
-        visibility:hidden;
+        visibility: hidden;
     }
 }
