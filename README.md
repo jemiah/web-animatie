@@ -3,7 +3,9 @@ Link: https://jemiah.github.io/web-animatie/
 
 ## Kunstwerk
 Dit is mijn gekozen kunstwerk:
- 
+
+<img width="300" alt="portfolio_view" src="kunstwerk.png">
+
 Ik heb gekozen voor dit werk omdat ik het leuk vind dat het uit kleine cirkels bestaat die samen een groter geheel vormen. Het kunstwerk komt van Phaidon(drive). Ik heb geprobeerd om meer te weten te komen over mijn kunstwerk maar ik heb in principe niks gevonden. Mijn kunstwerk moet de kaft van een boek voorstellen die door John A. Postley in 1963 is geschreven. Het boek gaat naar mijn idee over de interactie tussen mensen en computers. Ik heb het geïllustreerde gedeelte en de naam van het boek nagemaakt in Illustrator. De rest van de kaft vond ik niet zo mooi omdat het er verouderd uitziet.  
 
 # Functies
