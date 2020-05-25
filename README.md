@@ -40,7 +40,7 @@ Een van de goals van dit vak is om je kennis op het gebied van CSS te verbreden.
 -	Fill
 -	From To
 
-Voor bijna alle functies heb ik gebruik gemaakt van keyframes. Werken met keyframes vind ik niet zo moeilijk maar soms liep ik wel vast met transform. Soms zag de animatie er niet uit zoals ik dat wilde als oplossing hiervoor ging ik research doen naar het probleem of een andere animatie verzinnen.
+Voor bijna alle functies heb ik gebruik gemaakt van keyframes. Werken met keyframes vind ik niet zo moeilijk maar soms liep ik wel vast met transform. Soms zag de animatie er niet uit zoals ik dat wilde als oplossing hiervoor ging ik research doen naar het probleem of een andere animatie verzinnen. Verder heb ik ook gewerkt met `:nth-of-type()` voor de tekst.
 
 
 ## Javascript
