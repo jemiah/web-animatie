@@ -9,11 +9,17 @@ Dit is mijn gekozen kunstwerk:
 Ik heb gekozen voor dit werk omdat ik het leuk vind dat het uit kleine cirkels bestaat die samen een groter geheel vormen. Het kunstwerk komt van Phaidon(drive). Ik heb geprobeerd om meer te weten te komen over mijn kunstwerk maar ik heb in principe niks gevonden. Mijn kunstwerk moet de kaft van een boek voorstellen die door John A. Postley in 1963 is geschreven. Het boek gaat naar mijn idee over de interactie tussen mensen en computers. Ik heb het geïllustreerde gedeelte en de naam van het boek nagemaakt in Illustrator. De rest van de kaft vond ik niet zo mooi omdat het er verouderd uitziet.  
 
 # Functies
-Om het kunstwerk interactief te maken heb ik functies bedacht:
+Om het kunstwerk interactief te maken heb ik 3 functies bedacht:
+
+<img width="300" alt="portfolio_view" src="start.png">
 
 1. Als de pagina laad zie je de rode pop vervolgens schuiven er 2 blauwe lagen in elkaar. Daarna komt de groene laag in beeld en wordt de laag geplaatst over de blauwe laag en het rode poppetje.
 
+<img width="300" alt="portfolio_view" src="kleur.png">
+
 2. Als je op de witte knop klikt veranderen de kleuren van het kunstwerk. 
+
+<img width="300" alt="portfolio_view" src="schuif.png">
 
 3. Als je op de letter C (computers) klikt verdwijnt het kunstwerk. Eerst schuift de groene laag naar beneden. Vervolgens schuiven de 2 blauwe lagen uit elkaar en als laatst verdwijnt de rode pop. Het idee was eerst dat de rode pop draait op zijn plek en kleiner wordt totdat het verdwijnt maar de rode pop draaide rond het hele svg en niet op zijn plek.
 Op de mobiel krijg je de optie om op een groene knop te klikken zodat die functie ook gebruikt kan worden op de mobiel.
