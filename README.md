@@ -51,14 +51,17 @@ Wat voor mij nieuw was in Javascript is het gebruiken van een `KeyCode`. Hierdoo
 Om mijn website responsive te maken heb ik heb gewerkt met 3 breakpoints. Om het responsive te maken hebben ik gebruik gemaakt van `@media query’s`. In principe zijn alle functies die ik heb uitgewerkt te zien op alle breakpoints behalve de hovers.
 
 ### Computer:
+<img width="400" alt="portfolio_view" src="laptop.png">
 Op de computer zie je de witte knop en heb je de optie om op de letter C te klikken via je toetsenbord om een animatie te starten.
 
 
 ### Ipad:
+<img width="200" alt="portfolio_view" src="ipad.png">
 Als je een ipad hebt krijg je 2 knoppen in plaats van 1 knop te zien omdat een ipad geen toetsenbord heeft. 
 
 
 ### Telefoon:
+<img width="200" alt="portfolio_view" src="iphone 8 plus.png">
 Ik heb een Iphone 8 plus en heb dit voormaat aangehouden als breakpoint. Op de telefoon krijg je ook 2 knoppen te zien zodat alle functies zichtbaar zijn op elk formaat. 
  
 
