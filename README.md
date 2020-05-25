@@ -14,7 +14,67 @@ Om het kunstwerk interactief te maken heb ik 3 functies bedacht:
 <img width="300" alt="portfolio_view" src="start.png">
 
 1. Als de pagina laad zie je de rode pop vervolgens schuiven er 2 blauwe lagen in elkaar. Daarna komt de groene laag in beeld en wordt de laag geplaatst over de blauwe laag en het rode poppetje.
+```CSS 
+.blauw_links {
+    transition: transform 5s ease-in;
+    animation-duration: 5s;
+    animation-name: naarRechts;
+}
 
+@keyframes naarRechts {
+    from {
+        transform: translateX(-45em);
+    }
+
+    to {
+        transform: translateX(0em);
+    }
+}
+```
+In css heb ik met `keyframes` ervoor gezorgt dat de linkerkant van de blauwe laag eerst uit beeld is en daarna in beeld komt.
+
+```CSS
+.blauw_rechts {
+    transition: transform 5s ease-in;
+    animation-duration: 5s;
+    animation-name: naarLinks;
+}
+
+@keyframes naarLinks {
+    from {
+        transform: translateX(45em);
+    }
+
+    to {
+        transform: translateX(0em);
+    }
+}
+```
+Hetzelfde heb ik gedaan met de rechterkant.
+```CSS
+.groen {
+    transition: transform 5s ease-in;
+    animation-duration: 5s;
+    animation-name: naarAchteren;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+@keyframes naarAchteren {
+    from {
+        transform-origin: center;
+        opacity: 0%;
+        transform: scale(4);
+    }
+
+    to {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+```
+Met de groene laag heb ik ervoor gezorgd dat hij in het midden staat en kleiner wordt wanneer hij op de blauwe laag zit.
 <img width="300" alt="portfolio_view" src="kleur.png">
 
 2. Als je op de witte knop klikt veranderen de kleuren van het kunstwerk. 
