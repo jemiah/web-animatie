@@ -10,6 +10,7 @@ Ik heb gekozen voor dit werk omdat ik het leuk vind dat het uit kleine cirkels b
 
 # Functies
 Om het kunstwerk interactief te maken heb ik functies bedacht:
+
 1. Als de pagina laad zie je de rode pop vervolgens schuiven er 2 blauwe lagen in elkaar. Daarna komt de groene laag in beeld en wordt de laag geplaatst over de blauwe laag en het rode poppetje.
 
 2. Als je op de witte knop klikt veranderen de kleuren van het kunstwerk. 
