@@ -11,9 +11,10 @@ Ik heb gekozen voor dit werk omdat ik het leuk vind dat het uit kleine cirkels b
 # Functies
 Om het kunstwerk interactief te maken heb ik 3 functies bedacht:
 
+1. Als de pagina laad zie je de rode pop vervolgens schuiven er 2 blauwe lagen in elkaar. Daarna komt de groene laag in beeld en wordt de laag geplaatst over de blauwe laag en het rode poppetje.
 <img width="300" alt="portfolio_view" src="start.png">
 
-1. Als de pagina laad zie je de rode pop vervolgens schuiven er 2 blauwe lagen in elkaar. Daarna komt de groene laag in beeld en wordt de laag geplaatst over de blauwe laag en het rode poppetje.
+
 ```CSS 
 .blauw_links {
     transition: transform 5s ease-in;
@@ -75,14 +76,185 @@ Hetzelfde heb ik gedaan met de rechterkant.
 }
 ```
 Met de groene laag heb ik ervoor gezorgd dat hij in het midden staat en kleiner wordt wanneer hij op de blauwe laag zit.
-<img width="300" alt="portfolio_view" src="kleur.png">
 
 2. Als je op de witte knop klikt veranderen de kleuren van het kunstwerk. 
+<img width="300" alt="portfolio_view" src="kleur.png">
 
-<img width="300" alt="portfolio_view" src="schuif.png">
+```CSS
+.kleur1 {
+    fill: #ECA400;
+    transition: transform 2s ease-in;
+}
+
+.kleur2 {
+    fill: #EAF8BF;
+    transition: transform 2s ease-in;
+}
+
+.kleur3 {
+    fill: #DDBDD5;
+    transition: transform 2s ease-in;
+}
+```
+
+In CSS heb ik de classes gemaakt die worden opgeroepen wanneer je op de witte knop klikt.
+```JS
+/*element selecteren*/
+var pop = document.querySelector(".rood-pop");
+var button = document.querySelector(".knop");
+var button2 = document.querySelector(".knop2");
+var blauwLinks = document.querySelector(".blauw_links");
+var blauwRechts = document.querySelector(".blauw_rechts");
+var groen = document.querySelector(".groen");
+
+/*luisteren naar een event*/
+button.addEventListener('click', toggle);
+
+
+/*css aanpassen, class toevoegen*/
+function toggle() {
+    pop.classList.toggle('kleur1');
+    blauwLinks.classList.toggle('kleur2');
+    blauwRechts.classList.toggle('kleur2');
+    groen.classList.toggle('kleur3');
+    
+    console.log("test3");
+}
+```
+In Javascript selecteer ik de lagen van de svg. Vervolgens zorg ik ervoor dat wanneer je op de button klikt de classes in CSS worden opgeroepen.
 
 3. Als je op de letter C (computers) klikt verdwijnt het kunstwerk. Eerst schuift de groene laag naar beneden. Vervolgens schuiven de 2 blauwe lagen uit elkaar en als laatst verdwijnt de rode pop. Het idee was eerst dat de rode pop draait op zijn plek en kleiner wordt totdat het verdwijnt maar de rode pop draaide rond het hele svg en niet op zijn plek.
 Op de mobiel krijg je de optie om op een groene knop te klikken zodat die functie ook gebruikt kan worden op de mobiel.
+
+<img width="300" alt="portfolio_view" src="schuif.png">
+
+```CSS
+.groen2 {
+    transition: transform 5s ease-in;
+    animation-duration: 5s;
+    animation-name: omlaag;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    opacity: 100%;
+
+}
+
+@keyframes omlaag {
+    from {
+        transform: translateY(0em);
+        opacity: 100%;
+    }
+
+    to {
+        transform: translateY(30em);
+        opacity: 0%;
+    }
+}
+```
+Eerst verdwijnt de groene laag door middel van een transitie.
+
+```CSS
+.br {
+    transition: transform 4s ease-in;
+    animation-duration: 4s;
+    animation-name: verdwijnRechts;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.bl {
+    transition: transform 4s ease-in;
+    animation-duration: 4s;
+    animation-name: verdwijnlinks;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes verdwijnlinks {
+    from {
+        transform-origin: center center;
+        transform: translateX(-45em);
+        transform: rotateX(0);
+        opacity: 100%;
+    }
+
+    to {
+        transform: translateX(-15em);
+        opacity: 0%;
+
+    }
+}
+
+@keyframes verdwijnRechts {
+    from {
+        transform-origin: center center;
+        transform: translateX(45em);
+        transform: rotateX(0);
+        opacity: 100%;
+    }
+
+    to {
+        transform: translateX(15em);
+        opacity: 0%;
+
+    }
+}
+```
+Vervolgens schuift de blauw laag uit elkaar en verdwijnt het.
+
+```CSS
+.roodpoppetje {
+    transition: transform 5s linear;
+    animation-duration: 5s;
+    animation-name: wormgat;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes wormgat {
+
+    from {
+        transform-origin: center;
+        transform: scale(1);
+    }
+
+    to {
+
+        transform: scale(0);
+    }
+}
+```
+Het rode poppetje wordt kleiner en verdwijnt ook.
+```JS
+window.addEventListener('keydown',verdwijn);
+
+/*css aanpassen, class toevoegen*/
+function verdwijn(event){
+    if (event.keyCode === 67){
+        groen.classList.toggle('groen2');
+        blauwLinks.classList.toggle('bl');
+        blauwRechts.classList.toggle('br');
+        pop.classList.toggle('roodpoppetje');
+    }
+}
+```
+
+```JS
+button2.addEventListener('click',verdwijn2);
+
+function verdwijn2(){
+groen.classList.toggle('groen2');
+blauwLinks.classList.toggle('bl');
+blauwRechts.classList.toggle('br');
+pop.classList.toggle('roodpoppetje');  
+}
+```
+In Javascript heb ik ervoor gezorgd dat wanneer je op de letter C klikt de animatie wordt gestart. Ook werkt de animatie wanneer je op de groene knop klikt die alleen zichtbaar is op de mobiel en ipad.
+
 
 Overige ideeën die ik niet heb uitgewerkt omdat ik niet genoeg tijd had:
 1.	Ik wilde dat de cirkels 1 voor 1 heel snel in beeld komen maar dat kost heel veel tijd omdat het kunstwerk uit meer dan 100 cirkels bestaat.
