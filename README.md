@@ -4,9 +4,9 @@ Link: https://jemiah.github.io/web-animatie/
 ## Kunstwerk
 Dit is mijn gekozen kunstwerk:
 
-<img width="300" alt="portfolio_view" src="kunstwerk.png">
+<img width="250" alt="portfolio_view" src="kunstwerk.png">
 
-Ik heb gekozen voor dit werk omdat ik het leuk vind dat het uit kleine cirkels bestaat die samen een groter geheel vormen. Het kunstwerk komt van Phaidon(drive). Ik heb geprobeerd om meer te weten te komen over mijn kunstwerk maar ik heb in principe niks gevonden. Mijn kunstwerk moet de kaft van een boek voorstellen die door John A. Postley in 1963 is geschreven. Het boek gaat naar mijn idee over de interactie tussen mensen en computers. Ik heb het geïllustreerde gedeelte en de naam van het boek nagemaakt in Illustrator. De rest van de kaft vond ik niet zo mooi omdat het er verouderd uitziet.  
+Ik heb gekozen voor dit werk omdat ik het leuk vind dat het uit kleine cirkels bestaat die samen een groter geheel vormen. Het kunstwerk komt van Phaidon(drive). Ik heb geprobeerd om meer te weten te komen over mijn kunstwerk maar ik heb in principe niks gevonden. Mijn kunstwerk moet de kaft van een boek voorstellen die door John A. Postley in 1963 is geschreven. Het boek gaat naar mijn idee over hoe computers werden ingezet voor jouw bedrijf. Ik heb het geïllustreerde gedeelte en de naam van het boek nagemaakt in Illustrator. De rest van de kaft vond ik niet zo mooi omdat het er verouderd uitziet.  
 
 # Functies
 Om het kunstwerk interactief te maken heb ik 3 functies bedacht:
@@ -32,26 +32,7 @@ Om het kunstwerk interactief te maken heb ik 3 functies bedacht:
     }
 }
 ```
-In css heb ik met `keyframes` ervoor gezorgt dat de linkerkant van de blauwe laag eerst uit beeld is en daarna in beeld komt.
-
-```CSS
-.blauw_rechts {
-    transition: transform 5s ease-in;
-    animation-duration: 5s;
-    animation-name: naarLinks;
-}
-
-@keyframes naarLinks {
-    from {
-        transform: translateX(45em);
-    }
-
-    to {
-        transform: translateX(0em);
-    }
-}
-```
-Hetzelfde heb ik gedaan met de rechterkant.
+In css heb ik met `keyframes` ervoor gezorgt dat de linkerkant van de blauwe laag eerst uit beeld is en daarna in beeld komt. Hetzelfde heb ik gedaan met de rechterkant.
 ```CSS
 .groen {
     transition: transform 5s ease-in;
@@ -77,6 +58,7 @@ Hetzelfde heb ik gedaan met de rechterkant.
 ```
 Met de groene laag heb ik ervoor gezorgd dat hij in het midden staat en kleiner wordt wanneer hij op de blauwe laag zit.
 
+---
 2. Als je op de witte knop klikt veranderen de kleuren van het kunstwerk. 
 <img width="300" alt="portfolio_view" src="kleur.png">
 
@@ -123,6 +105,7 @@ function toggle() {
 ```
 In Javascript selecteer ik de lagen van de svg. Vervolgens zorg ik ervoor dat wanneer je op de button klikt de classes in CSS worden opgeroepen.
 
+---
 3. Als je op de letter C (computers) klikt verdwijnt het kunstwerk. Eerst schuift de groene laag naar beneden. Vervolgens schuiven de 2 blauwe lagen uit elkaar en als laatst verdwijnt de rode pop. Het idee was eerst dat de rode pop draait op zijn plek en kleiner wordt totdat het verdwijnt maar de rode pop draaide rond het hele svg en niet op zijn plek.
 Op de mobiel krijg je de optie om op een groene knop te klikken zodat die functie ook gebruikt kan worden op de mobiel.
 
@@ -255,6 +238,7 @@ pop.classList.toggle('roodpoppetje');
 ```
 In Javascript heb ik ervoor gezorgd dat wanneer je op de letter C klikt de animatie wordt gestart. Ook werkt de animatie wanneer je op de groene knop klikt die alleen zichtbaar is op de mobiel en ipad.
 
+---
 
 Overige ideeën die ik niet heb uitgewerkt omdat ik niet genoeg tijd had:
 1.	Ik wilde dat de cirkels 1 voor 1 heel snel in beeld komen maar dat kost heel veel tijd omdat het kunstwerk uit meer dan 100 cirkels bestaat.
