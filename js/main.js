@@ -30,19 +30,19 @@ function toggle() {
 
 /*knop die pop laat verdwijnen*/
 
-/*luisteren naar een event als je op P klikt*/
+/*luisteren naar een event als je op C (computers) klikt*/
 window.addEventListener('keydown',verdwijn);
-
 
 /*css aanpassen, class toevoegen*/
 function verdwijn(event){
-    if (event.keyCode === 80){
+    if (event.keyCode === 67){
         groen.classList.toggle('groen2');
         blauwLinks.classList.toggle('bl');
         blauwRechts.classList.toggle('br');
         pop.classList.toggle('roodpoppetje');
     }
 }
+
 
 /*luisteren naar een event als je op de knop klikt*/
 button2.addEventListener('click',verdwijn2);
